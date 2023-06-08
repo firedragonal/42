@@ -6,7 +6,7 @@
 /*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 15:21:27 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/08 12:00:50 by alphan           ###   ########.fr       */
+/*   Updated: 2023/06/08 18:57:17 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	boucle(char a, char b, char c)
 		{
 			writee(a, b, c);
 			write(1, ",", 1);
+			write(1, " ", 1);
 			c++;
 		}
 		if (c > '9')
@@ -58,3 +59,8 @@ void	ft_print_comb(void)
 	c = '2';
 	boucle(a, b, c);
 }
+/*
+int main()
+{
+	ft_print_comb();
+}*/
