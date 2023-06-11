@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/09 12:26:35 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/11 10:18:14 by alphan           ###   ########.fr       */
+/*   Created: 2023/06/11 10:28:24 by alphan            #+#    #+#             */
+/*   Updated: 2023/06/11 10:33:52 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-char	*ft_strcpy(char *dest, char *src)
+
+int	ft_str_is_uppercase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i])
+	while (str[i])
 	{
-		dest[i] = src[i];
+		if (str[i] < 'A' || str[i] > 'Z')
+			return (0);
 		i++;
 	}
-	return (dest);
+	return (1);
 }
 /*
 int main()
 {
-	char *src="hello";
-	char dest[6];
-	int i = 0;
-
-	ft_strcpy(dest, src);
-	printf("%s", dest);
+	char	str[] = "";
+	printf("%d", ft_str_is_uppercase(str));
 }*/

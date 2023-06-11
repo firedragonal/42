@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
+/*   By: alphan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/09 12:26:35 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/11 10:18:14 by alphan           ###   ########.fr       */
+/*   Created: 2023/06/10 17:14:54 by alphan            #+#    #+#             */
+/*   Updated: 2023/06/11 10:20:38 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (src[i])
+	while (i < n && src[i])
 	{
 		dest[i] = src[i];
 		i++;
@@ -26,10 +26,12 @@ char	*ft_strcpy(char *dest, char *src)
 /*
 int main()
 {
+	unsigned int n;
 	char *src="hello";
-	char dest[6];
+	char dest[7];
 	int i = 0;
 
-	ft_strcpy(dest, src);
+	n = 10;
+	ft_strncpy(dest, src, n);
 	printf("%s", dest);
 }*/

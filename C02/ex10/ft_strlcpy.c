@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/09 12:26:35 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/11 10:18:14 by alphan           ###   ########.fr       */
+/*   Created: 2023/06/11 13:31:20 by alphan            #+#    #+#             */
+/*   Updated: 2023/06/11 13:36:59 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-char	*ft_strcpy(char *dest, char *src)
-{
-	int	i;
+#include <stdio.h>
 
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	return (dest);
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+{
+
 }
-/*
-int main()
-{
-	char *src="hello";
-	char dest[6];
-	int i = 0;
-
-	ft_strcpy(dest, src);
-	printf("%s", dest);
-}*/
