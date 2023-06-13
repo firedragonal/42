@@ -6,11 +6,12 @@
 /*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 15:20:28 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/11 19:38:50 by alphan           ###   ########.fr       */
+/*   Updated: 2023/06/12 18:23:35 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
+#include <string.h>
 
 int	taille(char *s1, char *s2)
 {
@@ -55,7 +56,7 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
-/*
+
 int main()
 {
 	char s1[] = "abc";
@@ -64,8 +65,13 @@ int main()
 	char s4[] = "zzzz";
 	char s5[] = "abcaa";
 	printf("%d\n", ft_strcmp(s1, s2));
+	printf("%d\n", strcmp(s1, s2));
 	printf("%d\n", ft_strcmp(s3, s4));
+	printf("%d\n", strcmp(s3, s4));
 	printf("%d\n", ft_strcmp(s4, s3));
+	printf("%d\n", strcmp(s4, s3));
 	printf("%d\n", ft_strcmp(s1, s5));
+	printf("%d\n", strcmp(s1, s5));
 	printf("%d\n", ft_strcmp(s5, s1));
-}*/
+	printf("%d\n", strcmp(s5, s1));
+}
