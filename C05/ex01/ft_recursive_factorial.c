@@ -6,7 +6,7 @@
 /*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 09:16:59 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/15 12:44:23 by alphan           ###   ########.fr       */
+/*   Updated: 2023/06/15 20:28:05 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_recursive_factorial(int nb)
 	if (nb <= 0)
 		return (0);
 	if (nb > 0)
-		return nb *= ft_recursive_factorial(nb -1);
+		return (nb *= ft_recursive_factorial(nb -1));
 	else
 		return (1);
 }

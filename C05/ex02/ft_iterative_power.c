@@ -6,7 +6,7 @@
 /*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 09:36:11 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/15 12:47:44 by alphan           ###   ########.fr       */
+/*   Updated: 2023/06/15 20:28:44 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_iterative_power(int nb, int power)
 	i = 1;
 	if (power < 0)
 		return (0);
-	if ((nb == 0 && power == 0) || power ==0)
-		return 1;
-	while(power--)
+	if ((nb == 0 && power == 0) || power == 0)
+		return (1);
+	while (power--)
 	{
 		i *= nb;
 	}

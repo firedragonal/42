@@ -6,13 +6,31 @@
 /*   By: alphan <alphann@student.42mulhouse.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 14:49:42 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/15 15:02:58 by alphan           ###   ########.fr       */
+/*   Updated: 2023/06/15 20:31:44 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 
 int	ft_sqrt(int nb)
 {
-	
+	int	i;
+	int	pair;
+
+	i = 0;
+	pair = 1;
+	while (nb > 0)
+	{
+		nb -= pair;
+		pair += 2;
+		i++;
+	}
+	if (nb != 0)
+		return (0);
+	return (i);
 }
+/*
+int main()
+{
+	printf("%d", ft_sqrt(48));
+}*/
