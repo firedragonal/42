@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/15 09:08:30 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/19 11:20:58 by alphan           ###   ########.fr       */
+/*   Created: 2023/06/15 12:18:40 by alphan            #+#    #+#             */
+/*   Updated: 2023/06/15 20:30:35 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-int	ft_iterative_factorial(int nb)
+int	ft_fibonacci(int index)
 {
-	int	i;
-
-	i = nb - 1;
-	if (nb < 0)
+	if (index == 0)
 		return (0);
-	if (nb == 0)
+	else if (index < 0)
+		return (-1);
+	else if (index == 1)
 		return (1);
-	while (i >= 1)
-	{
-		nb *= i;
-		i--;
-	}
-	return (nb);
+	else
+		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
 /*
 int main()
 {
-	int	nb = 0;
-	printf("%d", ft_iterative_factorial(nb));
+	int	index = 3;
+	printf("%d", ft_fibonacci(index));
 }*/

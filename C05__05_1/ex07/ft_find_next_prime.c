@@ -6,12 +6,12 @@
 /*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 19:51:29 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/19 11:23:02 by alphan           ###   ########.fr       */
+/*   Updated: 2023/06/19 14:59:11 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int	ft_sqrt(int nb)
 {
@@ -34,6 +34,8 @@ int	ft_is_prime(int nb)
 	int	i;
 
 	i = 11;
+	if (nb == 2 || nb == 3 || nb == 5|| nb == 7)
+		return (1);
 	if (nb % 2 == 0)
 		return (0);
 	else if (nb % 3 == 0)
@@ -64,9 +66,9 @@ int	ft_find_next_prime(int nb)
 	}
 	return (nb);
 }
-/*
+
 int main(int ac, char **av)
 {
 	ac = 1;
 	printf("%d", ft_find_next_prime(atoi(av[1])));
-}*/
+}

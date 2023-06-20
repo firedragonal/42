@@ -6,7 +6,7 @@
 /*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 18:35:26 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/15 20:37:42 by alphan           ###   ########.fr       */
+/*   Updated: 2023/06/19 11:23:24 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ int	ft_is_prime(int nb)
 		return (0);
 	else
 	{
-		while (i < ft_sqrt(nb) / i)
+		while (i < ft_sqrt(nb))
 		{
-			if (nb % i == 0)
+			if (nb % i == 0 || nb % (i + 2) == 0)
 				return (0);
-			i++;
+			i += 6;
 		}
 	}
 	return (1);

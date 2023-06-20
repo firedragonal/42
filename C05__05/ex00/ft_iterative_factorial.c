@@ -6,7 +6,7 @@
 /*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 09:08:30 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/19 11:20:58 by alphan           ###   ########.fr       */
+/*   Updated: 2023/06/15 20:27:34 by alphan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ int	ft_iterative_factorial(int nb)
 	int	i;
 
 	i = nb - 1;
-	if (nb < 0)
+	if (nb <= 0)
 		return (0);
-	if (nb == 0)
-		return (1);
 	while (i >= 1)
 	{
 		nb *= i;
@@ -31,6 +29,6 @@ int	ft_iterative_factorial(int nb)
 /*
 int main()
 {
-	int	nb = 0;
+	int	nb = 4;
 	printf("%d", ft_iterative_factorial(nb));
 }*/

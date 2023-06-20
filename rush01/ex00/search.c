@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   search.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alphan <alphan@student.42mulhouse.fr>      +#+  +:+       +#+        */
+/*   By: alphan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/15 16:13:18 by alphan            #+#    #+#             */
-/*   Updated: 2023/06/16 11:00:26 by alphan           ###   ########.fr       */
+/*   Created: 2023/06/17 16:55:56 by alphan            #+#    #+#             */
+/*   Updated: 2023/06/18 23:01:25 by alphan           ###   ########.fr       */
+/*   Updated: 2023/06/17 19:24:37 by chajeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "combine.h"
 
-void	ft_putstr(char *str)
+void	search(int **board, int **order)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (str[i])
+	while (i < B_SIZE)
 	{
-		write(1, &str[i], 1);
+		search_for_4(board, order, i, j);
+		search_for_1(board, order, i, j);
+		search_for_3(board, order, i, j);
 		i++;
 	}
-}
-
-int	main(int argc, char *argv[])
-{
-	argc = 0;
-	ft_putstr(argv[0]);
-	ft_putstr("\n");
 }
